@@ -6,18 +6,11 @@ import 'package:sutraq_app/routes/routes.dart';
 import 'package:lottie/lottie.dart';
 import 'package:sutraq_app/views/auth/authLogic.dart';
 
-class SignUpScreen extends StatefulWidget {
-  @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
-}
-
-class _SignUpScreenState extends State<SignUpScreen> {
+class SignUpScreen extends StatelessWidget {
   TextEditingController _emailController = TextEditingController();
 
   TextEditingController _passwordController = TextEditingController();
 
-  bool isChecked = false;
-  bool _obsecureText = true;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -71,44 +64,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             TextFormField(
                               controller: _passwordController,
                               keyboardType: TextInputType.text,
+                              obscureText: true,
                               decoration: InputDecoration(
                                 labelText: "Password",
-                                suffixIcon: IconButton(
-                                  icon: Icon(
-                                    _obsecureText
-                                        ? Icons.visibility
-                                        : Icons.visibility_off,
-                                    color: Theme.of(context).primaryColorDark,
-                                  ),
-                                  onPressed: () {
-                                    setState(() {
-                                      _obsecureText = !_obsecureText;
-                                    });
-                                  },
-                                ),
                               ),
-                            ),
-                            SizedBox(height: 10.h),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    Checkbox(
-                                      value: isChecked,
-                                      onChanged: (value) {
-                                        setState(() {
-                                          isChecked = value!;
-                                        });
-                                      },
-                                    ),
-                                    Text("Check recoarments")
-                                  ],
-                                ),
-                                InkWell(
-                                    onTap: () {},
-                                    child: Text("Forget Password"))
-                              ],
                             ),
                             SizedBox(
                               height: 60.h,

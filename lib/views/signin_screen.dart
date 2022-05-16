@@ -8,17 +8,11 @@ import 'package:lottie/lottie.dart';
 import 'package:sutraq_app/styles/styles.dart';
 import 'package:sutraq_app/views/auth/authLogic.dart';
 
-class SigninScreen extends StatefulWidget {
-  @override
-  State<SigninScreen> createState() => _SigninScreenState();
-}
-
-class _SigninScreenState extends State<SigninScreen> {
+class SigninScreen extends StatelessWidget {
   TextEditingController _emailController = TextEditingController();
 
   TextEditingController _passwordController = TextEditingController();
 
-  bool isChecked = false;
   bool _obsecureText = true;
   @override
   Widget build(BuildContext context) {
@@ -89,40 +83,15 @@ class _SigninScreenState extends State<SigninScreen> {
                             TextFormField(
                               controller: _passwordController,
                               keyboardType: TextInputType.text,
+                              obscureText: true,
                               decoration: InputDecoration(
                                 labelText: "Password",
-                                suffixIcon: IconButton(
-                                  icon: Icon(
-                                    _obsecureText
-                                        ? Icons.visibility
-                                        : Icons.visibility_off,
-                                    color: Theme.of(context).primaryColorDark,
-                                  ),
-                                  onPressed: () {
-                                    setState(() {
-                                      _obsecureText = !_obsecureText;
-                                    });
-                                  },
-                                ),
                               ),
                             ),
                             SizedBox(height: 10.h),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Row(
-                                  children: [
-                                    Checkbox(
-                                      value: isChecked,
-                                      onChanged: (value) {
-                                        setState(() {
-                                          isChecked = value!;
-                                        });
-                                      },
-                                    ),
-                                    Text("Check recoarments")
-                                  ],
-                                ),
                                 InkWell(
                                     onTap: () => Get.toNamed(forget),
                                     child: Text("Forget Password"))
