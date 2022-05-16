@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "168624667673",
+    "project_id": "sutraqapp",
+    "storage_bucket": "sutraqapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168624667673:android:884636e3a3aebba149fe88",
+        "android_client_info": {
+          "package_name": "com.example.sutraq_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168624667673-mmivgkmqklvgmt0b68s7q8rho9c2tcvs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sutraq_app",
+            "certificate_hash": "e8da1dcaed63c206ae39f03be171ca8568695a87"
+          }
+        },
+        {
+          "client_id": "168624667673-g4d1pavlr1m55ssirrduu8dn9nn33iqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq9imEfKKtr1Ii8uV-pBp4nGp2h9dyPYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168624667673-g4d1pavlr1m55ssirrduu8dn9nn33iqu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
